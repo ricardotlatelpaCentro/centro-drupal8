@@ -1,0 +1,22 @@
+.main-resources {
+    padding: 50px 0;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url('../images/centro-collections-image.jpg') ;
+    background-size: cover;
+    color: rgba(255,255,255,0.8);    
+    &--data{
+        padding: 50px 0;
+        background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url('../images/stock_image.png');
+        background-size: cover;
+        color: rgba(255,255,255,0.8);
+        @include respond(phone){
+            background-size: cover;
+            background-position: center center;
+        }
+    }
+    @include respond(phone){
+        background-position: center;
+    }
+}
+
+
+

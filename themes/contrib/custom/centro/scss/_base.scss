@@ -1,0 +1,40 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+//conflicting p declaration with bootstrap ***
+p {
+    margin-bottom: 0 ;
+}
+//***
+
+
+html {
+    line-height: 1.3;
+    font-family: 'Lato', sans-serif;
+}
+[class*="title"],[class*="header"]  {
+    font-family: 'Rokkitt', serif;
+  }
+.gold {
+    color: $color-gold;
+}
+//GRID DEFINITIONS 
+.row {
+    max-width: 1026px;
+    margin: 0 auto;    
+}
+.grid-container-col-3 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);    
+    overflow: visible;    
+    @include respond(phone){
+        grid-template-rows: min-content min-content;
+    }
+}
+
+.full-bleed {
+    grid-column: span 3;
+}

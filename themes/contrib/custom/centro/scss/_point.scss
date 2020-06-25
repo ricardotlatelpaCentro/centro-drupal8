@@ -1,0 +1,130 @@
+.point {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $color-main-purple;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: translateX(-55%);
+    &-connect {
+        position: relative;
+        border-left: 1px solid $color-main-purple;
+        padding-left: 10px;
+        &--end {
+            position: relative;
+            padding-left: 10px;
+            @include respond(tablet){
+                margin-left: 1.5rem;   
+                padding: 0; 
+            }
+            //phone 
+            @include respond(phone){
+                margin: 0;
+                padding: 0;
+            }            
+        }
+        @include respond(tablet){
+            margin-left: 1.5rem;    
+        }
+        //phone
+        @include respond(phone){
+            padding: 0;
+            border: none;        
+        }
+    }
+    &__description{
+        &__horizontal {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            @include respond(phone){
+                display: block;
+                text-align: center;
+            }
+            p {
+            @include respond(phone){
+                padding: 0;
+            }
+            }
+        }
+        p {
+            padding-left: 10px;
+        }
+        @include respond(tablet){
+            margin-left: 1.5rem;    
+        }
+        @include respond(phone){
+            grid-column: 1 / -1;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding: 0;
+        }
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 30px;
+        @include respond(phone){
+            padding: 0;
+            margin: 0;
+        }
+    }
+    &__side-paragraph {
+        margin-left: 25px;
+        @include respond(phone){
+            margin-left: 0;    
+        }
+
+        
+
+    }
+    &-content {
+        grid-column: 2 / span 2;
+        display: grid;
+        grid-template-rows: max-content;
+        grid-row-gap: 15px;
+        font-size: 1.2rem;
+        &__title {
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+        &__img {
+            width: 70%;
+            margin: 0 auto;
+            @include respond(phone){
+                margin: 0 auto;
+                width: 80%;
+            }
+        }
+        p {
+            @include respond(tablet){
+                padding: 0 10px;        
+            }
+        }
+        @include respond(phone){
+            grid-row: 2 / 3;
+            grid-column:1 / -1;  
+            margin-bottom: 2rem; 
+            padding: 0 1rem;   
+        }
+    }
+    @include respond(phone){
+        background: transparent;
+    }
+}
+.extend-connect {
+    padding: 60px 0;
+    @include respond(phone) {
+        padding: 20px 0;
+    }
+}
+.svg-icon {
+    fill: white;
+    height: 25px;
+    width: 25px;
+}
+
